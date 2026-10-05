@@ -1,0 +1,30 @@
+@use '../base/mixins' as *;
+
+// Only responsive artwork and treatment-video sizing are specific to this page.
+// Typography, sections, image borders, pricing and gallery styles are shared.
+.image-desktop {
+  display: block;
+
+  @include breakpoint(smartphones) {
+    display: none;
+  }
+}
+
+.image-mobile {
+  display: none;
+
+  @include breakpoint(smartphones) {
+    display: block;
+  }
+}
+
+
+.video-pure-straight {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  video {
+    width: 400px;
+    max-width: 100%;
+  }
+}
