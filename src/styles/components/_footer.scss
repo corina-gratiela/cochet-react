@@ -1,0 +1,119 @@
+@use '../base/settings' as *;
+@use '../base/mixins' as *;
+
+.site-footer {
+	background: #725944 url("../../assets/images/footer.png") repeat-x;
+	font-family: $font-Raleway;
+	color: #e1e1e1;
+	font-size: 13px;
+	padding-top: 20px;
+}
+
+.site-footer .wrapper {
+	@include flexbox;
+	@include justify-content(space-between);
+
+	@include breakpoint(smartphones) {
+		display: block;
+	}
+}
+
+.site-footer__top {
+	padding: 5px 0;
+	font-size: 16px;
+}
+
+.site-footer__bottom {
+	padding: 10px;
+	border-top: 1px solid #877658;
+	background: #18140d;
+
+	.wrapper {
+		@include align-items(center);
+	}
+
+	@include breakpoint(medium) {
+		text-align: center;
+
+		.wrapper {
+			display: block;
+		}
+	}
+}
+
+.site-footer__anpc {
+	padding: 10px;
+	background: #18140d;
+	.wrapper {
+		justify-content: flex-end;
+		a {
+			margin: 5px;
+			img {
+				width: 151px;
+				height: 37px;
+			}
+		}
+	}
+}
+
+.footer-nav {
+	@include breakpoint(medium) {
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+}
+
+.footer-nav__list {
+	@include flexbox;
+	list-style-type: none;
+
+	@include breakpoint(smartphones) {
+		display: block;
+	}
+}
+
+.footer-nav__item {
+	display: inline-block;
+}
+
+.footer-nav__link {
+	display: block;
+	padding: 5px;
+	font-size: 14px;
+	color: $color-link-footer;
+	@include handCursor;
+
+	&:hover {
+		color: $color-link-footer-hover;
+	}
+}
+
+.footer-box {
+	text-align: left;
+	padding: 10px;
+
+	@include breakpoint(medium) {
+		margin-bottom: 20px;
+	}
+}
+
+.footer-box__title {
+	color: #f0f0f0;
+	font-size: 18px;
+	padding-bottom: 8px;
+}
+
+.footer-box__content {
+	.icon {
+		margin-right: 7px;
+	}
+
+	p {
+		padding: 4px 0;
+		letter-spacing: 1px;
+	}
+
+	a {
+		color: $color-link-footer;
+	}
+}

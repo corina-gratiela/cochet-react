@@ -1,0 +1,6 @@
+// Minimal foundation only; no legacy design has been migrated.
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

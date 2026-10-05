@@ -1,0 +1,19 @@
+@use 'settings' as *;
+@mixin breakpoint($media) {
+  @if $media == smartphones { @media only screen and (max-width: $break-small) { @content; } }
+  @else if $media == medium { @media only screen and (max-width: $break-large - 1) { @content; } }
+}
+@mixin flexbox { display: flex; }
+@mixin flex-direction($value: row) { flex-direction: $value; }
+@mixin flex($value: 1) { flex: $value; }
+@mixin justify-content($value) { justify-content: $value; }
+@mixin align-items($value) { align-items: $value; }
+@mixin clear-text { text-indent: -999px; overflow: hidden; }
+@mixin handCursor { cursor: pointer; }
+@mixin userSelectNone { user-select: none; }
+@mixin borderRadius($value) { border-radius: $value; }
+@mixin boxShadow($value) { box-shadow: $value; }
+@mixin backgroundGradient($start, $end) {
+  background-image: linear-gradient(to bottom, $start 0%, $end 100%);
+  background-repeat: repeat-y;
+}

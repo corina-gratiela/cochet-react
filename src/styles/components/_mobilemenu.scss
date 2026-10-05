@@ -1,0 +1,50 @@
+@use '../base/settings' as *;
+@use '../base/mixins' as *;
+
+.mobile-menu {
+	border-top : solid 1px #604f2c;
+	width      : 100%;
+	display    : none;
+	background: #000;
+	@include breakpoint(medium) {
+		display : block;
+	}
+}
+
+.menu-nav__list {
+  list-style-type: none;
+  @include flexbox;
+  @include justify-content(space-around);
+}
+
+.menu-nav__item {
+}
+
+.menu-nav__link {
+	text-transform : uppercase;
+	text-align     : center;
+	display        : block;
+	padding        : 10px 5px;
+	cursor         : pointer;
+	color          : #bbb;
+	font-size      : 10px;
+	font-weight    : 500;
+	position       : relative;
+	@include userSelectNone;
+	&:hover {
+		color : $color-mobile-menu;
+		.icon {
+			color : currentColor;
+		}
+	}
+	.icon {
+		color         : currentColor;
+		display       : block;
+		font-size     : 25px;
+		margin-bottom : 5px;
+	}
+}
+
+.menu-nav__link--active {
+	color : $color-mobile-menu;
+}
