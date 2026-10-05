@@ -1,0 +1,79 @@
+@use '../base/settings' as *;
+@use '../base/mixins' as *;
+
+// Only legacy homepage rules; shared layout stays in main.scss.
+.prezentare-servicii {
+  @include flexbox;
+
+  @include breakpoint(medium) {
+    display: block;
+  }
+}
+
+.prezentare-servicii__item {
+  @include flex(0 0 33%);
+}
+
+.prezentare-servicii__wrap {
+  padding: 10px;
+
+  img {
+    border: solid 6px #726144;
+    width: 100%;
+    height: auto;
+    max-width: 280px;
+  }
+
+  h2 {
+    border-bottom: solid 1px #e6b25d;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+
+    a {
+      color: #e6b25d;
+    }
+  }
+
+  .link-detalii {
+    font-size: 12px;
+
+    a {
+      color: #726144;
+    }
+  }
+}
+
+.va-asteptam {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 26px;
+  font-style: italic;
+  line-height: 31px;
+  color: #f8ddca;
+  margin: 7px 0 7px 10px;
+}
+
+
+.category-box {
+  margin: 10px 0 20px;
+}
+
+.category-box__title {
+  font-family: $font-Raleway;
+  font-size: 20px;
+  padding: 13px 2px 4px 0;
+  color: $light-red;
+  border-bottom: solid 1px $light-red;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.space-h {
+  height: 20px;
+}
+
+.semnatura {
+  color: #726144;
+  text-align: right;
+  font-style: italic;
+  padding-top: 5px;
+}
