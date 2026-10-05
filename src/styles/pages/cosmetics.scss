@@ -1,0 +1,11 @@
+// Only treatment-step list rules from legacy scss/layout/_pages.scss.
+// Typography, sections, image borders and responsive pricing remain shared.
+ul.etape {
+  list-style-type: none;
+  padding-left: 10px;
+  li {
+    font-size: 14px;
+    color: #cabeab;
+  }
+}
+
