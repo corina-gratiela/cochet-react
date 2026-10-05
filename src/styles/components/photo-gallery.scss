@@ -1,0 +1,79 @@
+@use '../vendor/owl-core';
+@use '../vendor/owl-theme';
+@use '../base/settings' as *;
+@use '../base/mixins' as *;
+
+.owl-carousel {
+  .owl-nav {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    padding: 0 10px;
+
+    button.owl-prev,
+    button.owl-next {
+      background: rgba(0, 0, 0, 0.5);
+      width: 70px;
+      height: 70px;
+      @include borderRadius(50%);
+
+      span {
+        font-size: 60px;
+        display: block;
+        margin-top: -10px;
+        color: #aaa;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.6);
+
+        span {
+          color: $white;
+        }
+      }
+    }
+
+    button.owl-prev {
+      float: left;
+    }
+
+    button.owl-next {
+      float: right;
+    }
+
+    @include breakpoint(smartphones) {
+      display: none;
+    }
+  }
+}
+
+.galerie-foto {
+  width: 100%;
+  max-width: 700px;
+
+  .owl-dots {
+    margin-top: 15px;
+  }
+}
+
+.info-poza {
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+  padding: 8px 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: $white;
+  font-size: 23px;
+  line-height: 1.2;
+
+  @include breakpoint(smartphones) {
+    font-size: 18px;
+    bottom: 10px;
+  }
+}
+
+
+// Keep photographs available if a local dependency fails to load.
+.photo-gallery--fallback { display: block; }
+.photo-gallery--fallback .item { position: relative; }
+.photo-gallery--fallback img { display: block; width: 100%; }
