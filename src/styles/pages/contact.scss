@@ -1,0 +1,22 @@
+@use '../base/settings' as *;
+
+// Contact-only rules from legacy scss/layout/_pages.scss.
+// Global typography and responsive columns remain in the shared layout.
+.contact-item {
+  & + .contact-item {
+    margin-top: 20px;
+  }
+}
+
+.contact-item__label {
+  width: 100px;
+  color: #e6b25d;
+  display: inline-block;
+}
+
+.harta {
+  display: block;
+  width: 100%;
+  border: solid 1px $color-border;
+  padding: 5px;
+}
