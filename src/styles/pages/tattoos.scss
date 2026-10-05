@@ -1,0 +1,54 @@
+@use '../base/settings' as *;
+@use '../base/mixins' as *;
+
+// Only image and pricing rules needed by the tattoos page.
+// Section spacing, typography, columns and gallery styles are already shared.
+.category-box__img {
+  width: 100%;
+  border: solid 6px #726144;
+  margin-bottom: 20px;
+}
+
+.preturi {
+  padding: 5px 0 10px;
+  border-bottom: solid 1px $color-border;
+}
+
+.preturi__title {
+  font-family: $font-Cinzel;
+  font-size: 20px;
+  color: #a08a64;
+  padding-bottom: 8px;
+}
+
+.preturi__list {
+  padding-left: 10px;
+}
+
+.pret {
+  font-size: 16px;
+  @include flexbox;
+  @include justify-content(space-between);
+  padding-bottom: 5px;
+
+  @include breakpoint(smartphones) {
+    display: block;
+  }
+}
+
+.pret__label {
+  color: #ddd4c5;
+  padding-right: 10px;
+  @include flex(1);
+}
+
+.pret__value {
+  color: #a08a64;
+  width: 150px;
+  text-align: right;
+
+  @include breakpoint(smartphones) {
+    text-align: left;
+  }
+}
+
