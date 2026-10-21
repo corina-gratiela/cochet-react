@@ -1,8 +1,8 @@
 # Cochet React
 
 React, Vite, TypeScript, SCSS, and React Router with the migrated shared layout.
-The legacy cochet-new project is separate and untouched. Individual page content
-and galleries have not been migrated.
+The legacy cochet-new project is separate and untouched. Page content
+and galleries have been migrated into reusable React components.
 
 ## Development
 
@@ -19,9 +19,10 @@ The default base path is /. For a subdirectory deployment, set VITE_BASE_PATH
 same base path. Production hosting must serve index.html for application routes;
 Apache configuration and legacy redirects are deferred to the hosting step.
 
-Pages remain heading-only placeholders. Header, logo, desktop/mobile navigation,
+Pages use migrated content. Header, logo, desktop/mobile navigation,
 sidebar, footer, global layout, and typography use the legacy markup and styles.
 The mobile menu intentionally excludes the gallery route, as in the legacy site.
+
 ## Shared layout sources and preservation
 
 - protected/meniu.php: header, logo, desktop and mobile navigation.
@@ -45,3 +46,21 @@ SAL/SOL SVGs retain public paths. External footer URLs remain unchanged.
 
 TypeScript and production builds were checked. Browser visual parity has not yet
 been verified. Legacy IE support is outside the modern Vite application target.
+
+## Photo galleries
+
+PhotoGallery uses embla-carousel-react and embla-carousel-autoplay 8.6.0.
+There is no jQuery or Owl dependency, global script loading, or imperative slide
+markup creation. React renders images, captions, arrows, and snap pagination.
+
+The gallery fills its content column unless maxWidth is provided. Mobile-first
+slide widths show one image through 768px, two from 769px, and 2.5 from 1024px.
+GalleryPage passes desktopSlides={2} for its three-photo salon gallery.
+Images use contain inside a consistent area so no photograph is cropped.
+
+Existing props (images, label, maxWidth, autoplay, autoplayTimeout, navigation,
+dots, loop) remain supported. desktopSlides accepts 2 or 2.5. Autoplay defaults
+to five seconds and can be paused/resumed using the gallery control. Focus pauses
+automatic motion; manual pause persists across resizing and interactions.
+For galleries too short for continuous looping, navigation wraps at the ends.
+All slider controls and carousel instances are local to their React component.

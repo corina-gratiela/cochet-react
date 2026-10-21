@@ -9,7 +9,7 @@ export default function GalleryPage() {
       <meta name="description" content="Galerie foto Salon Cochet" />
       <h1>Galerie Foto</h1>
       <ContentSection title="Galerie foto Salon Cochet">
-        <PhotoGallery images={salonGallery} label="Galerie foto Salon Cochet" />
+        <PhotoGallery images={salonGallery} label="Galerie foto Salon Cochet" desktopSlides={2} />
       </ContentSection>
     </>
   );
