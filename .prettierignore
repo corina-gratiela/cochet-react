@@ -1,0 +1,5 @@
+node_modules/
+dist/
+public/
+src/styles/vendor/
+package-lock.json
