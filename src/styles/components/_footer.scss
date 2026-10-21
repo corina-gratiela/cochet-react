@@ -2,7 +2,8 @@
 @use '../base/mixins' as *;
 
 .site-footer {
-	background: #725944 url("../../assets/images/footer.png") repeat-x;
+	background: #725944;
+	border-top: 1px solid #8a735b;
 	font-family: $font-Raleway;
 	color: #e1e1e1;
 	font-size: 13px;
