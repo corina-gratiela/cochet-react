@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       <title>Salon Cochet Sibiu: coafor, frizerie, manichiură, pedichiură</title>
       <meta name="description" content="Salon Cochet Sibiu vă oferă servicii de coafor, frizerie, manichiură, machiaj, aplicări unghii cu gel, microblading, micropigmentare." />
-      <div className="video-container" style={{ maxWidth: '100%' }}>
+      <div className="video-container home-video" style={{ maxWidth: '100%' }}>
         <VideoPlayer src={import.meta.env.BASE_URL + 'video/cochet-aniversar.mp4'} />
       </div>
       <p className="va-asteptam">Vă așteptăm la Salon Cochet Sibiu să fiți răsfățați din cap până în picioare, așa cum oricine își dorește.</p>

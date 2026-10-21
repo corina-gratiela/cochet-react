@@ -59,3 +59,9 @@
   font-style: italic;
   padding-top: 5px;
 }
+
+.home-video {
+  @include breakpoint(smartphones) {
+    display: none;
+  }
+}

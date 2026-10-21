@@ -1,5 +1,5 @@
-@use 'settings' as *;
-@use 'mixins' as *;
+@use "settings" as *;
+@use "mixins" as *;
 *,
 *:before,
 *:after {
@@ -141,7 +141,7 @@ body {
 .site-content__right {
   width: 30%;
   float: left;
-  padding: 10px 0 0 10px;
+  padding: 0 0 0 10px;
   border-left: solid 1px $color-border;
   @include breakpoint(medium) {
     width: 100%;
@@ -159,4 +159,6 @@ body {
 }
 
 // React adds a root element between body and the legacy layout.
-#root { height: 100%; }
+#root {
+  height: 100%;
+}

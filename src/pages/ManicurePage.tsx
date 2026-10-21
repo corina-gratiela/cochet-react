@@ -36,27 +36,23 @@ export default function ManicurePage() {
             </div>
             <div className="pret">
               <div className="pret__label">Manichiură cu ojă semi-permanentă</div>
-              <div className="pret__value">95 lei</div>
+              <div className="pret__value">130 lei</div>
             </div>
             <div className="pret">
               <div className="pret__label">Manichiură cu gel pe unghie naturală</div>
-              <div className="pret__value">95 lei</div>
+              <div className="pret__value">130 lei</div>
             </div>
             <div className="pret">
               <div className="pret__label">Construcție cu gel</div>
-              <div className="pret__value">160 lei</div>
+              <div className="pret__value">170-185 lei</div>
             </div>
             <div className="pret">
               <div className="pret__label">Întreținere gel</div>
-              <div className="pret__value">110 lei</div>
-            </div>
-            <div className="pret">
-              <div className="pret__label">Lăcuit</div>
-              <div className="pret__value">40 lei</div>
+              <div className="pret__value">130 lei</div>
             </div>
             <div className="pret">
               <div className="pret__label">Manichiură bărbați</div>
-              <div className="pret__value">65 lei</div>
+              <div className="pret__value">70 lei</div>
             </div>
           </div>
         </div>
@@ -70,11 +66,7 @@ export default function ManicurePage() {
             </div>
             <div className="pret">
               <div className="pret__label">Pedichiură cu ojă semi-permanentă</div>
-              <div className="pret__value">115 lei</div>
-            </div>
-            <div className="pret">
-              <div className="pret__label">Pedichiură cu gel</div>
-              <div className="pret__value">110 lei</div>
+              <div className="pret__value">120-150 lei</div>
             </div>
             <div className="pret">
               <div className="pret__label">Pedichiură bărbați</div>

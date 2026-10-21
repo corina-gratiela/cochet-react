@@ -122,59 +122,59 @@ export default function HairPage() {
           <div className="preturi__list">
             <div className="pret">
               <div className="pret__label">Vopsit păr scurt</div>
-              <div className="pret__value">200 lei</div>
-            </div>
-            <div className="pret">
-              <div className="pret__label">Vopsit păr mediu</div>
               <div className="pret__value">230 lei</div>
             </div>
             <div className="pret">
-              <div className="pret__label">Vopsit păr lung</div>
+              <div className="pret__label">Vopsit păr mediu</div>
               <div className="pret__value">260 lei</div>
+            </div>
+            <div className="pret">
+              <div className="pret__label">Vopsit păr lung</div>
+              <div className="pret__value">280 lei</div>
             </div>
 
             <div className="pret">
               <div className="pret__label">Șuvite păr scurt</div>
-              <div className="pret__value">200 lei</div>
+              <div className="pret__value">230 lei</div>
             </div>
             <div className="pret">
               <div className="pret__label">Șuvite păr mediu</div>
-              <div className="pret__value">220 lei</div>
+              <div className="pret__value">250 lei</div>
             </div>
             <div className="pret">
               <div className="pret__label">Șuvite păr lung</div>
-              <div className="pret__value">240 lei</div>
+              <div className="pret__value">280 lei</div>
             </div>
 
             <div className="pret">
               <div className="pret__label">Decolorat păr rădăcină</div>
-              <div className="pret__value">200 lei</div>
+              <div className="pret__value">230 lei</div>
             </div>
 
             <div className="pret">
               <div className="pret__label">Decolorat păr scurt</div>
-              <div className="pret__value">200 lei</div>
-            </div>
-            <div className="pret">
-              <div className="pret__label">Decolorat păr mediu</div>
               <div className="pret__value">230 lei</div>
             </div>
             <div className="pret">
+              <div className="pret__label">Decolorat păr mediu</div>
+              <div className="pret__value">280 lei</div>
+            </div>
+            <div className="pret">
               <div className="pret__label">Decolorat păr lung</div>
-              <div className="pret__value">260 lei</div>
+              <div className="pret__value">290 lei</div>
             </div>
 
             <div className="pret">
               <div className="pret__label">Manoperă vopsit păr scurt</div>
-              <div className="pret__value">75 lei</div>
-            </div>
-            <div className="pret">
-              <div className="pret__label">Manoperă vopsit păr mediu</div>
               <div className="pret__value">80 lei</div>
             </div>
             <div className="pret">
+              <div className="pret__label">Manoperă vopsit păr mediu</div>
+              <div className="pret__value">85 lei</div>
+            </div>
+            <div className="pret">
               <div className="pret__label">Manoperă vopsit păr lung</div>
-              <div className="pret__value">95 lei</div>
+              <div className="pret__value">100 lei</div>
             </div>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function HairPage() {
             </div>
             <div className="pret">
               <div className="pret__label">Coafat ocazie (coc)</div>
-              <div className="pret__value">120 lei</div>
+              <div className="pret__value">130 lei</div>
             </div>
             <div className="pret">
               <div className="pret__label">Coafat mireasă</div>
@@ -212,15 +212,15 @@ export default function HairPage() {
             </div>
             <div className="pret">
               <div className="pret__label">Permanent scurt (cu soluție Bio PREVIA)</div>
-              <div className="pret__value">250 lei</div>
-            </div>
-            <div className="pret">
-              <div className="pret__label">Permanent mediu (cu soluție Bio PREVIA)</div>
               <div className="pret__value">270 lei</div>
             </div>
             <div className="pret">
+              <div className="pret__label">Permanent mediu (cu soluție Bio PREVIA)</div>
+              <div className="pret__value">290 lei</div>
+            </div>
+            <div className="pret">
               <div className="pret__label">Permanent lung (cu soluție Bio PREVIA)</div>
-              <div className="pret__value">320 lei</div>
+              <div className="pret__value">350 lei</div>
             </div>
 
             <div className="pret">
