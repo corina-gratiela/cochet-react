@@ -17,7 +17,7 @@ interface PhotoGalleryProps {
   navigation?: boolean;
   dots?: boolean;
   loop?: boolean;
-  desktopSlides?: 2 | 2.5;
+  desktopSlides?: 2 | 2.5 | 3.5;
 }
 
 export default function PhotoGallery({ images, label, maxWidth, autoplay = true, autoplayTimeout = 3000, navigation = true, dots = true, loop = true, desktopSlides = 2.5 }: PhotoGalleryProps) {
@@ -89,7 +89,7 @@ export default function PhotoGallery({ images, label, maxWidth, autoplay = true,
   if (images.length === 0) return null;
 
   return (
-    <div className={`galerie-foto photo-gallery${desktopSlides === 2 ? ' photo-gallery--two' : ''}`} style={{ maxWidth }} role="region" aria-roledescription="carusel" aria-label={label}>
+    <div className={`galerie-foto photo-gallery${desktopSlides === 2 ? ' photo-gallery--two' : desktopSlides === 3.5 ? ' photo-gallery--three-and-half' : ''}`} style={{ maxWidth }} role="region" aria-roledescription="carusel" aria-label={label}>
       <div className="photo-gallery__stage">
         <div className="photo-gallery__viewport" ref={viewportRef}>
           <div className="photo-gallery__track">

@@ -13,12 +13,12 @@ export default function HairPage() {
       <title>Coafor, frizerie Sibiu. Servicii complexe de tuns, coafat, hair-styling, vopsit, șuvite, permanent</title>
       <meta name="description" content="Servicii complexe de tuns, coafat, vopsit păr scurt, mediu sau lung, vopsit, șuvițe, permanent, extensii de păr, hair styling la Salon Cochet Sibiu" />
       <h1>Coafură și frizerie</h1>
-      <nav className="hair-page__links" aria-label="Secțiuni coafură și frizerie">
+      <nav className="service-page__links" aria-label="Secțiuni coafură și frizerie">
         <a href="#preturi-coafor">Prețuri</a>
         <a href="#galerie-coafor">Galerie foto</a>
         <a href="#pure-straight">PURE STRAIGHT</a>
       </nav>
-      <div className="hair-page__intro">
+      <div className="service-page__intro">
         <div className="category-box">
           <div className="category-box__title">
             <h2>Servicii coafură și frizerie</h2>
@@ -32,9 +32,9 @@ export default function HairPage() {
           <PhoneLink number="0722 227020" />
         </InfoPanel>
       </div>
-      <section id="preturi-coafor" className="category-box" aria-labelledby="hair-prices-title">
-        <h2 id="hair-prices-title">Prețuri</h2>
-        <div className="hair-prices">
+      <section id="preturi-coafor" className="category-box" aria-labelledby="service-prices-title">
+        <h2 id="service-prices-title">Prețuri</h2>
+        <div className="service-prices">
           <div className="preturi">
             <div className="preturi__title">Preturi tuns, spalat</div>
             <div className="preturi__list">
@@ -181,7 +181,7 @@ export default function HairPage() {
       </section>
       <section id="galerie-coafor" className="category-box" aria-label="Galerie foto coafuri, styling, permanent">
         <ContentSection title="Galerie foto coafuri, styling, permanent">
-          <PhotoGallery images={hairGallery} label="Galerie foto coafuri, styling, permanent" />
+          <PhotoGallery desktopSlides={3.5} images={hairGallery} label="Galerie foto coafuri, styling, permanent" />
         </ContentSection>
       </section>
       <section id="pure-straight" className="category-box hair-treatment" aria-label="PURE STRAIGHT">
@@ -205,20 +205,19 @@ export default function HairPage() {
             <p>Sigilează cuticula părului, protejand-o de umiditate și contracarează astfel efectul de frizz, chiar și in zilele extrem de umede. </p>
             <h3>Îmbunătățește structura părului</h3>
             <p>Creează un strat protector pe firul de păr ce îmbunătățește structura părului, îi conferă elasticitate și previne ruperea acestuia.</p>
+            <p>
+              Prețul variază în funcție de lungimea și structura părului. Contactați-ne la numărul de telefon <PhoneLink number="0722 227020" /> pentru detalii.
+            </p>
+
+            <p>
+              Descăcați{' '}
+              <a href={import.meta.env.BASE_URL + 'images/pure-straight/prezentare-pure-straight.pdf'} className="link" target="_blank">
+                aici
+              </a>{' '}
+              prezentarea în detaliu.
+            </p>
           </div>
         </div>
-
-        <p>
-          Prețul variază în funcție de lungimea și structura părului. Contactați-ne la numărul de telefon <PhoneLink number="0722 227020" /> pentru detalii.
-        </p>
-
-        <p>
-          Descăcați{' '}
-          <a href={import.meta.env.BASE_URL + 'images/pure-straight/prezentare-pure-straight.pdf'} className="link" target="_blank">
-            aici
-          </a>{' '}
-          prezentarea în detaliu.
-        </p>
       </section>
       <div className="category-box">
         <p>Pentru vopsit folosim cele mai renumite game profesionale şi vă ajutăm în alegerea nuanţei potrivite tenului dumneavoastră, vârstei, tipului de păr, potrivită pentru stilul dumneavoastră de viaţă.</p>
@@ -234,7 +233,7 @@ export default function HairPage() {
           Pentru coafat, styling, vopsit şi aranjat duminica, contactați-ne la <PhoneLink number="0722 227020" />
         </p>
       </div>
-      <div className="hair-page__hours">
+      <div className="service-page__hours">
         <SalonHours />
       </div>
     </>

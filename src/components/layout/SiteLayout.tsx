@@ -3,10 +3,13 @@ import SiteHeader from './SiteHeader';
 import MobileNavigation from '../navigation/MobileNavigation';
 import SalonSidebar from './SalonSidebar';
 import SiteFooter from './SiteFooter';
+import '../../styles/components/service-page.scss';
 
 export default function SiteLayout() {
   const isHome = useMatch('/');
   const isHair = useMatch('/servicii/coafor');
+  const isManicure = useMatch('/servicii/manichiura');
+  const isWideService = isHair || isManicure;
   return (
     <div className="body-container">
       <SiteHeader />
@@ -17,11 +20,11 @@ export default function SiteLayout() {
       </div>
       <main className="site-main">
         <div className="wrapper">
-          <div className={`site-content${isHome ? ' site-content--home' : ''}${isHair ? ' site-content--hair' : ''}`}>
+          <div className={`site-content${isHome ? ' site-content--home' : ''}${isWideService ? ' site-content--wide' : ''}`}>
             <div className="site-content__left">
               <Outlet />
             </div>
-            {!isHair && <SalonSidebar />}
+            {!isWideService && <SalonSidebar />}
           </div>
         </div>
       </main>

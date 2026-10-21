@@ -17,6 +17,11 @@
   @include breakpoint(desktop-up) {
     --gallery-slide-size: 40%;
   }
+  &--three-and-half {
+    @include breakpoint(desktop-up) {
+      --gallery-slide-size: calc(100% / 3.5);
+    }
+  }
   &--two {
     @include breakpoint(desktop-up) {
       --gallery-slide-size: 50%;
