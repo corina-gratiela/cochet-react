@@ -10,6 +10,15 @@
 }
 
 .site-footer .wrapper {
+	padding-inline: 16px;
+
+	@include breakpoint(tablet-up) {
+		padding-inline: 32px;
+	}
+	@include breakpoint(desktop-up) {
+		padding-inline: 48px;
+	}
+
 	display: block;
 	@include justify-content(space-between);
 

@@ -32,7 +32,6 @@ export default function HomePage() {
           </p>
         </div>
         <div className="home-hero__media">
-          <img className="home-hero__photo" src={import.meta.env.BASE_URL + 'images/galerie/salon/salon1.jpg'} alt="Interiorul Salon Cochet Sibiu" width="700" height="450" />
           <div className="video-container home-video">
             <VideoPlayer src={import.meta.env.BASE_URL + 'video/cochet-aniversar.mp4'} />
           </div>
