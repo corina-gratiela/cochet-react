@@ -1,7 +1,6 @@
 @use '../base/mixins' as *;
 
-// Only responsive artwork and treatment-video sizing are specific to this page.
-// Typography, sections, image borders, pricing and gallery styles are shared.
+// Page-specific layout; shared typography, pricing and gallery components are retained.
 .image-desktop {
   display: none;
 
@@ -18,7 +17,6 @@
   }
 }
 
-
 .video-pure-straight {
   width: 100%;
   margin: 0 auto;
@@ -27,4 +25,115 @@
     width: 400px;
     max-width: 100%;
   }
+}
+
+.site-content--hair .site-content__left {
+  width: 100%;
+  float: none;
+  padding-right: 0;
+}
+
+.hair-page__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 16px 0 24px;
+  a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+.hair-page__intro {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+  > .category-box {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  @include breakpoint(desktop-up) {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  }
+}
+
+.site-content--hair {
+  #preturi-coafor,
+  #galerie-coafor,
+  #pure-straight {
+    scroll-margin-top: 100px;
+    @include breakpoint(desktop-up) {
+      scroll-margin-top: 24px;
+    }
+  }
+}
+
+.hair-prices {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+  @include breakpoint(desktop-up) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .preturi {
+    min-width: 0;
+  }
+  .preturi__list {
+    padding-left: 0;
+  }
+  .pret {
+    display: flex;
+    gap: 8px;
+  }
+  .pret__value {
+    width: auto;
+    flex-shrink: 0;
+    text-align: right;
+  }
+}
+
+.hair-treatment__body {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+  > .video-pure-straight {
+    max-width: 320px;
+    margin: 0 auto;
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  @include breakpoint(tablet-up) {
+    grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  }
+  @include breakpoint(desktop-up) {
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+  }
+}
+.hair-treatment__artwork {
+  margin-bottom: 20px;
+  overflow: hidden;
+  .category-box__img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center 35%;
+    margin-bottom: 0;
+    @include breakpoint(tablet-up) {
+      height: 280px;
+    }
+  }
+}
+.hair-treatment__description {
+  min-width: 0;
+}
+.hair-treatment__body {
+  margin-bottom: 24px;
+}
+.hair-page__hours {
+  max-width: 560px;
+  margin: 32px 0;
 }

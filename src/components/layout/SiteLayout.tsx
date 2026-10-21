@@ -6,6 +6,7 @@ import SiteFooter from './SiteFooter';
 
 export default function SiteLayout() {
   const isHome = useMatch('/');
+  const isHair = useMatch('/servicii/coafor');
   return (
     <div className="body-container">
       <SiteHeader />
@@ -16,11 +17,11 @@ export default function SiteLayout() {
       </div>
       <main className="site-main">
         <div className="wrapper">
-          <div className={`site-content${isHome ? ' site-content--home' : ''}`}>
+          <div className={`site-content${isHome ? ' site-content--home' : ''}${isHair ? ' site-content--hair' : ''}`}>
             <div className="site-content__left">
               <Outlet />
             </div>
-            <SalonSidebar />
+            {!isHair && <SalonSidebar />}
           </div>
         </div>
       </main>

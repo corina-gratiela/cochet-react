@@ -38,33 +38,7 @@ export default function SalonSidebar() {
           </div>
         </div>
       </InfoPanel>
-      <InfoPanel title="Program">
-        <div className="info-panel__content">
-          <p>
-            <span className="info-panel__label">Luni-Vineri:</span> 8<sup>00</sup>-20<sup>00</sup>
-          </p>
-          <p>
-            <span className="info-panel__label">Sambata:</span> 8<sup>00</sup>-14<sup>00</sup>
-          </p>
-          <div className="info-panel__location">
-            <p>
-              <Icon name="location" /> str. Doamna Stanca, nr.9, Bl.3
-            </p>
-            <p>Șelimbar - Sibiu, Romania</p>
-          </div>
-          <div className="info-panel__phone">
-            <p>
-              <Icon name="phone" />{' '}
-              <span>
-                <PhoneLink number="0722 227020" />
-              </span>
-            </p>
-            <p>
-              <Icon name="mail" /> <a href="mailto:contact@salon-cochet.ro">contact@salon-cochet.ro</a>
-            </p>
-          </div>
-        </div>
-      </InfoPanel>
+      <SalonHours />
       <InfoPanel title="Oferim servicii de">
         <div className="info-panel__content">
           <p>
@@ -103,5 +77,37 @@ export default function SalonSidebar() {
         </div>
       </InfoPanel>
     </aside>
+  );
+}
+
+export function SalonHours() {
+  return (
+    <InfoPanel title="Program">
+      <div className="info-panel__content">
+        <p>
+          <span className="info-panel__label">Luni-Vineri:</span> 8<sup>00</sup>-20<sup>00</sup>
+        </p>
+        <p>
+          <span className="info-panel__label">Sambata:</span> 8<sup>00</sup>-14<sup>00</sup>
+        </p>
+        <div className="info-panel__location">
+          <p>
+            <Icon name="location" /> str. Doamna Stanca, nr.9, Bl.3
+          </p>
+          <p>Șelimbar - Sibiu, Romania</p>
+        </div>
+        <div className="info-panel__phone">
+          <p>
+            <Icon name="phone" />{' '}
+            <span>
+              <PhoneLink number="0722 227020" />
+            </span>
+          </p>
+          <p>
+            <Icon name="mail" /> <a href="mailto:contact@salon-cochet.ro">contact@salon-cochet.ro</a>
+          </p>
+        </div>
+      </div>
+    </InfoPanel>
   );
 }
