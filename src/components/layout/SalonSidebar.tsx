@@ -6,12 +6,12 @@ export default function SalonSidebar() {
   return (
     <aside className="site-content__right" aria-label="Informații salon">
       <InfoPanel title="Programari">
-        <div className="unde-cand__program">
-          <div className="unde-cand__line">
+        <div className="info-panel__program">
+          <div className="info-panel__line">
             <span className="entry">Coafură, frizerie:</span>
             <span className="value">0722 227020</span>
           </div>
-          <div className="unde-cand__line">
+          <div className="info-panel__line">
             <span className="entry">Manichiură, pedichiură:</span>
             <span className="value">
               0758 641200
@@ -21,31 +21,31 @@ export default function SalonSidebar() {
               0743 505205
             </span>
           </div>
-          <div className="unde-cand__line">
+          <div className="info-panel__line">
             <span className="entry">Microblading, micropigmentare:</span>
             <span className="value">0730 809072</span>
           </div>
-          <div className="unde-cand__line">
+          <div className="info-panel__line">
             <span className="entry">Cosmetică:</span>
             <span className="value">0741 391807</span>
           </div>
         </div>
       </InfoPanel>
       <InfoPanel title="Program">
-        <div className="unde-cand__content">
+        <div className="info-panel__content">
           <p>
-            <span className="unde-cand__label">Luni-Vineri:</span> 8<sup>00</sup>-20<sup>00</sup>
+            <span className="info-panel__label">Luni-Vineri:</span> 8<sup>00</sup>-20<sup>00</sup>
           </p>
           <p>
-            <span className="unde-cand__label">Sambata:</span> 8<sup>00</sup>-14<sup>00</sup>
+            <span className="info-panel__label">Sambata:</span> 8<sup>00</sup>-14<sup>00</sup>
           </p>
-          <div className="unde-cand__location">
+          <div className="info-panel__location">
             <p>
               <Icon name="location" /> str. Doamna Stanca, nr.9, Bl.3
             </p>
             <p>Șelimbar - Sibiu, Romania</p>
           </div>
-          <div className="unde-cand__phone">
+          <div className="info-panel__phone">
             <p>
               <Icon name="phone" /> <span>0722 227020</span>
             </p>
@@ -56,7 +56,7 @@ export default function SalonSidebar() {
         </div>
       </InfoPanel>
       <InfoPanel title="Oferim servicii de">
-        <div className="unde-cand__content">
+        <div className="info-panel__content">
           <p>
             <Link to="/servicii/coafor">Tuns, spălat</Link>
           </p>

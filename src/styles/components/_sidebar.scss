@@ -1,18 +1,18 @@
 @use '../base/settings' as *;
 @use '../base/mixins' as *;
 
-.unde-cand {
+.info-panel {
   @include borderRadius(4px);
   @include boxShadow(0 1px 1px #000);
   padding: 20px;
   background: #3f3524;
 
-  .unde-cand + & {
+  .info-panel + & {
     margin-top: 30px;
   }
 }
 
-.unde-cand__title {
+.info-panel__title {
   font-family: $font-Cinzel;
   border-bottom: 1px solid #846c46;
   padding-bottom: 10px;
@@ -24,20 +24,20 @@
   }
 }
 
-.unde-cand__content {
+.info-panel__content {
   p {
     font-size: 14px;
     line-height: 24px;
   }
 }
 
-.unde-cand__label {
+.info-panel__label {
   width: 90px;
   display: inline-block;
   color: #e6b25d;
 }
 
-.unde-cand__location {
+.info-panel__location {
   border-top: solid 1px $color-border;
   margin-top: 10px;
 
@@ -46,7 +46,7 @@
   }
 }
 
-.unde-cand__phone {
+.info-panel__phone {
   border-top: solid 1px $color-border;
   margin-top: 10px;
 
@@ -68,7 +68,7 @@
   }
 }
 
-.unde-cand__line {
+.info-panel__line {
   padding-bottom: 10px;
   font-size: 14px;
   @include flexbox();
