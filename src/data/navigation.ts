@@ -7,5 +7,5 @@ export const navigation: readonly NavigationItem[] = [
   { path: '/servicii/tatuaje', label: 'Tatuaje', mobileLabel: 'Tatuaje', icon: 'eyelash', mobile: true },
   { path: '/servicii/cosmetica', label: 'Cosmetică', mobileLabel: 'Cosmetică', icon: 'cosmetics', mobile: true },
   { path: '/contact', label: 'Contact', mobileLabel: 'Contact', icon: 'mail', mobile: true },
-  { path: '/galerie-foto', label: 'Galerie Foto', mobileLabel: 'Foto', icon: 'image', mobile: false },
+  { path: '/galerie-foto', label: 'Galerii Foto', mobileLabel: 'Foto', icon: 'image', mobile: false },
 ];

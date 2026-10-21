@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import FooterNavigation from '../navigation/FooterNavigation';
 import Icon from '../content/Icon';
 
@@ -17,11 +18,11 @@ export default function SiteFooter() {
     			<div className="footer-box">
     				<div className="footer-box__title">Servicii oferite</div>
     				<div className="footer-box__content">
-    					<p><Icon name="star" />Coafor, frizerie</p>
-    					<p><Icon name="star" />Manichiură, pedichiură</p>
-    					<p><Icon name="star" />Tatuaje</p>
-    					<p><Icon name="star" />Tratamente faciale</p>
-    					<p><Icon name="star" />Pensat, epilat</p>
+    					<p><Icon name="star" /><Link to="/servicii/coafor">Coafor, frizerie</Link></p>
+    					<p><Icon name="star" /><Link to="/servicii/manichiura">Manichiură, pedichiură</Link></p>
+    					<p><Icon name="star" /><Link to="/servicii/tatuaje">Tatuaje</Link></p>
+    					<p><Icon name="star" /><Link to="/servicii/cosmetica">Tratamente faciale</Link></p>
+    					<p><Icon name="star" /><Link to="/servicii/cosmetica">Pensat, epilat</Link></p>
     				</div>
     			</div>
     		</div>
