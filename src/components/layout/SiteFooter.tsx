@@ -1,3 +1,4 @@
+import PhoneLink from '../content/PhoneLink';
 import { Link } from 'react-router';
 import FooterNavigation from '../navigation/FooterNavigation';
 import Icon from '../content/Icon';
@@ -10,7 +11,7 @@ export default function SiteFooter() {
     			<div className="footer-box">
     				<div className="footer-box__title">Contact</div>
     				<div className="footer-box__content">
-    					<p><Icon name="phone" /><a href="tel:0722227020">0722 227020</a></p>
+    					<p><Icon name="phone" /><PhoneLink number="0722 227020" /></p>
     					<p><Icon name="mail" /><a href="mailto:contact@salon-cochet.ro">contact@salon-cochet.ro</a></p>
     					<p><Icon name="location" />Șelimbar, str. Doamna Stanca, nr.9, Bl.3, Romania</p>
     				</div>

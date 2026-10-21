@@ -1,23 +1,23 @@
-import "../styles/pages/cosmetics.scss";
+import PhoneLink from '../components/content/PhoneLink';
+import '../styles/pages/cosmetics.scss';
 
 export default function CosmeticsPage() {
   return (
     <>
       <title>Tratamente faciale, Pensat, epilat la Salon Cochet Sibiu</title>
       <meta name="description" content="Vă oferim servcii de pensat, epilat scurt și lung, epilat brațe, abdomen, tratamente faciale" />
-      <h1>Cosmetica</h1>
+      <h1>Cosmetică</h1>
       <div className="category-box">
         <div className="category-box__title">Tratamente faciale</div>
         <p>Vă oferim tratamente faciale anti-aging CNC Skincare. </p>
+        <p>Gama de produse CNC Skincare -made in Germany- cuprinde dermato-cosmetice inovatoare, cu ingrediente active, pentru un succes vizibil și de durată. Astfel, efectele tratamentelor CNC Skincare sunt vizibile de la prima ședință!</p>
         <p>
-          Gama de produse CNC Skincare -made in Germany- cuprinde dermato-cosmetice inovatoare, cu ingrediente active, pentru un succes vizibil și de durată. Astfel, efectele tratamentelor CNC
-          Skincare sunt vizibile de la prima ședință!
+          Pentru programări sunați la numărul de telefon <PhoneLink number="0741 391807" />
         </p>
-        <p>Pentru programări sunați la numărul de telefon 0741 391807</p>
       </div>
 
       <div className="category-box">
-        <img className="category-box__img" style={{ maxWidth: 600 }} src={import.meta.env.BASE_URL + "images/site/cosmetica.jpg"} alt="Tratamente faciale anti-aging CNC Skincare" />
+        <img className="category-box__img" style={{ maxWidth: 600 }} src={import.meta.env.BASE_URL + 'images/site/cosmetica.jpg'} alt="Tratamente faciale anti-aging CNC Skincare" />
       </div>
 
       <div className="category-box">
@@ -64,7 +64,9 @@ export default function CosmeticsPage() {
       <div className="category-box">
         <div className="category-box__title">Pensat și epilat</div>
         <p>Vă oferim servicii de epilare damă și bărbați, vopsit gene și sprâncene</p>
-        <p>Pentru programări sunați la numărul de telefon 0741 391807</p>
+        <p>
+          Pentru programări sunați la numărul de telefon <PhoneLink number="0741 391807" />
+        </p>
       </div>
 
       <div className="category-box">

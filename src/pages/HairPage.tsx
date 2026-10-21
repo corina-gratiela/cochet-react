@@ -1,3 +1,4 @@
+import PhoneLink from '../components/content/PhoneLink';
 import ContentSection from '../components/content/ContentSection';
 import PhotoGallery from '../components/gallery/PhotoGallery';
 import VideoPlayer from '../components/media/VideoPlayer';
@@ -9,7 +10,7 @@ export default function HairPage() {
     <>
       <title>Coafor, frizerie Sibiu. Servicii complexe de tuns, coafat, hair-styling, vopsit, șuvite, permanent</title>
       <meta name="description" content="Servicii complexe de tuns, coafat, vopsit păr scurt, mediu sau lung, vopsit, șuvițe, permanent, extensii de păr, hair styling la Salon Cochet Sibiu" />
-      <h1>Coafura si frizerie</h1>
+      <h1>Coafură și frizerie</h1>
       <div className="category-box">
         <div className="category-box__title">
           <h2>Nou la Salon Cochet: PURE STRAIGHT cu proteină de soia & ulei de macadamia</h2>
@@ -30,7 +31,9 @@ export default function HairPage() {
           <VideoPlayer src={import.meta.env.BASE_URL + 'images/pure-straight/video.mp4'} />
         </div>
 
-        <p>Prețul variază în funcție de lungimea și structura părului. Contactați-ne la numărul de telefon 0722 227020 pentru detalii.</p>
+        <p>
+          Prețul variază în funcție de lungimea și structura părului. Contactați-ne la numărul de telefon <PhoneLink number="0722 227020" /> pentru detalii.
+        </p>
 
         <p>
           Descăcați{' '}
@@ -60,7 +63,9 @@ export default function HairPage() {
         <p>Din octombrie 2015 vă oferim tratamente pentru păr 100% BIO, inclusiv vopsit. Produsele din aceasta gamă nu conțin parabeni, nici arome sintetice ori coloranți artificiali.</p>
         <p>Alegeți ce e mai bun pentru părul dumneavoastră!</p>
 
-        <p>Pentru coafat, styling, vopsit şi aranjat duminica, contactați-ne la 0722 227020</p>
+        <p>
+          Pentru coafat, styling, vopsit şi aranjat duminica, contactați-ne la <PhoneLink number="0722 227020" />
+        </p>
       </div>
       <div className="category-box">
         <div className="preturi">

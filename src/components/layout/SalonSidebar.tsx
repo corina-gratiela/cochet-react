@@ -1,3 +1,4 @@
+import PhoneLink from '../content/PhoneLink';
 import { Link } from 'react-router';
 import Icon from '../content/Icon';
 import InfoPanel from '../content/InfoPanel';
@@ -5,29 +6,35 @@ import InfoPanel from '../content/InfoPanel';
 export default function SalonSidebar() {
   return (
     <aside className="site-content__right" aria-label="Informații salon">
-      <InfoPanel title="Programari">
+      <InfoPanel id="programari" title="Programări">
         <div className="info-panel__program">
           <div className="info-panel__line">
             <span className="entry">Coafură, frizerie:</span>
-            <span className="value">0722 227020</span>
+            <span className="value">
+              <PhoneLink number="0722 227020" />
+            </span>
           </div>
           <div className="info-panel__line">
             <span className="entry">Manichiură, pedichiură:</span>
             <span className="value">
-              0758 641200
+              <PhoneLink number="0758 641200" />
               <br />
-              0732 125905
+              <PhoneLink number="0732 125905" />
               <br />
-              0743 505205
+              <PhoneLink number="0743 505205" />
             </span>
           </div>
           <div className="info-panel__line">
             <span className="entry">Microblading, micropigmentare:</span>
-            <span className="value">0730 809072</span>
+            <span className="value">
+              <PhoneLink number="0730 809072" />
+            </span>
           </div>
           <div className="info-panel__line">
             <span className="entry">Cosmetică:</span>
-            <span className="value">0741 391807</span>
+            <span className="value">
+              <PhoneLink number="0741 391807" />
+            </span>
           </div>
         </div>
       </InfoPanel>
@@ -47,7 +54,10 @@ export default function SalonSidebar() {
           </div>
           <div className="info-panel__phone">
             <p>
-              <Icon name="phone" /> <span>0722 227020</span>
+              <Icon name="phone" />{' '}
+              <span>
+                <PhoneLink number="0722 227020" />
+              </span>
             </p>
             <p>
               <Icon name="mail" /> <a href="mailto:contact@salon-cochet.ro">contact@salon-cochet.ro</a>
@@ -64,34 +74,20 @@ export default function SalonSidebar() {
             <Link to="/servicii/coafor">Vopsit, decolorat, vopsit şuviţe</Link>
           </p>
           <p>
-            <Link to="/servicii/coafor">Permanent, Hair Styling</Link>
-          </p>
-          <p>
-            <Link to="/servicii/coafor">Extensii de păr</Link>
+            <Link to="/servicii/coafor">Permanent, Hair Styling, Extensii de păr</Link>
           </p>
           <p>
             <Link to="/servicii/coafor">Coafat mirese</Link>
           </p>
           <p>
-            <Link to="/servicii/tatuaje">Tatuaj sprâncene</Link>
+            <Link to="/servicii/tatuaje">Tatuaj sprâncene, Contur buze</Link>
           </p>
           <p>
-            <Link to="/servicii/tatuaje">Contur buze</Link>
+            <Link to="/servicii/tatuaje">Laminare gene si sprâncene</Link>
           </p>
           <p>
-            <Link to="/servicii/tatuaje">Laminare gene</Link>
+            <Link to="/servicii/cosmetica">Tratamente faciale, Pensat, Epilat</Link>
           </p>
-          <p>
-            <Link to="/servicii/tatuaje">Laminare sprâncene</Link>
-          </p>
-
-          <p>
-            <Link to="/servicii/cosmetica">Tratamente faciale</Link>
-          </p>
-          <p>
-            <Link to="/servicii/cosmetica">Pensat, Epilat</Link>
-          </p>
-
           <p>
             <Link to="/servicii/manichiura">Manichiură, Pedichiură</Link>
           </p>

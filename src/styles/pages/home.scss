@@ -1,68 +1,256 @@
 @use '../base/settings' as *;
 @use '../base/mixins' as *;
 
-// Only legacy homepage rules; shared layout stays in main.scss.
-.prezentare-servicii {
-  display: block;
-
-  @include breakpoint(desktop-up) {
-    @include flexbox;
-  }
-}
-
-.prezentare-servicii__item {
-  @include flex(0 0 33%);
-}
-
-.prezentare-servicii__wrap {
-  padding: 10px;
-
-  img {
-    border: solid 6px #726144;
+.site-content--home {
+  .site-content__left {
     width: 100%;
-    height: auto;
-    max-width: 280px;
+    float: none;
+    padding: 0;
   }
-
-  h2 {
-    border-bottom: solid 1px #e6b25d;
-    margin-bottom: 10px;
-    padding-bottom: 2px;
-
-    a {
-      color: #e6b25d;
+  .site-content__right {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    float: none;
+    border: 0;
+    padding: 0;
+    margin: 40px 0 0;
+    @include breakpoint(tablet-up) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include breakpoint(desktop-up) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .info-panel {
+      margin: 0;
     }
   }
+}
 
-  .link-detalii {
-    font-size: 12px;
-
-    a {
-      color: #726144;
+.home-eyebrow {
+  color: $light-red;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+.home-hero {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid $color-border;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #342a1d, #211b14);
+  @include breakpoint(tablet-up) {
+    grid-template-columns: 1.05fr 1fr;
+    align-items: center;
+  }
+}
+.home-hero__content {
+  padding: 28px 24px;
+  @include breakpoint(desktop-up) {
+    padding: 48px;
+  }
+  h1 {
+    font-family: $font-Cinzel;
+    font-size: clamp(30px, 3.5vw, 46px);
+    line-height: 1.2;
+    color: $light-red;
+    padding: 0 0 24px;
+    letter-spacing: 0;
+    span {
+      display: none;
+      @include breakpoint(desktop-up) {
+        display: block;
+      }
+      font-family: $base-font;
+      font-size: 0.58em;
+      color: #f4e9d9;
+      margin-top: 14px;
+      line-height: 1.4;
     }
   }
 }
-
-.va-asteptam {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 26px;
-  font-style: italic;
-  line-height: 31px;
-  color: #f8ddca;
-  margin: 7px 0 7px 10px;
+.home-hero__welcome {
+  color: $color-text;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 48ch;
+  padding-bottom: 24px;
 }
-
-
-.semnatura {
-  color: #726144;
-  text-align: right;
-  font-style: italic;
-  padding-top: 5px;
+.home-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
-
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border: 1px solid #846c46;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  &.home-button--primary {
+    background: $light-red;
+    color: #211b14;
+    border-color: $light-red;
+    &:hover {
+      background: #f8da9e;
+      border-color: #f8da9e;
+      color: #211b14;
+    }
+  }
+  &--secondary {
+    color: #f4e9d9;
+    &:hover {
+      border-color: $light-red;
+      color: $light-red;
+    }
+  }
+}
+.home-hero__location {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 12px;
+  color: #c5b79f;
+  padding: 20px 0 0;
+}
+.home-hero__media {
+  min-width: 0;
+  background: #181208;
+  @include breakpoint(tablet-up) {
+    margin: 20px 20px 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+.home-hero__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  @include breakpoint(tablet-up) {
+    display: none;
+  }
+}
 .home-video {
   display: none;
   @include breakpoint(tablet-up) {
     display: block;
+  }
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.home-services {
+  margin-top: 48px;
+}
+.home-section-heading {
+  margin-bottom: 24px;
+  .home-eyebrow {
+    padding-bottom: 6px;
+  }
+  h2 {
+    font-size: clamp(24px, 3vw, 30px);
+    padding: 0;
+    color: #f4e9d9;
+  }
+}
+.prezentare-servicii {
+  display: grid;
+  gap: 20px;
+  @include breakpoint(tablet-up) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.prezentare-servicii__item {
+  min-width: 0;
+}
+.prezentare-servicii__wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 0 24px;
+  border: 1px solid $color-border;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #282117;
+  > a {
+    display: block;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 7 / 5;
+    object-fit: cover;
+  }
+  h2 {
+    font-size: 19px;
+    line-height: 1.45;
+    padding: 22px 22px 12px;
+    a {
+      color: $light-red;
+    }
+  }
+  > p {
+    padding: 0 22px 20px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .link-detalii {
+    margin-top: auto;
+    padding-bottom: 0;
+    font-size: 13px;
+    font-weight: 600;
+    a {
+      color: #f4e9d9;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      &:hover {
+        color: $light-red;
+      }
+    }
+  }
+}
+.home-message {
+  margin-top: 48px;
+  padding: 28px 24px;
+  border: 1px solid $color-border;
+  border-left: 3px solid $light-red;
+  border-radius: 12px;
+  background: #241e15;
+  @include breakpoint(tablet-up) {
+    padding: 36px 40px;
+  }
+  .home-eyebrow {
+    padding-bottom: 4px;
+  }
+  h2 {
+    color: #f4e9d9;
+    font-size: 26px;
+    padding-bottom: 18px;
+  }
+  > p:not(.home-eyebrow):not(.semnatura) {
+    max-width: 85ch;
+    line-height: 1.9;
+  }
+  .semnatura {
+    padding: 8px 0 0;
+    color: $light-red;
+    font-size: 14px;
+  }
+}
+#programari {
+  scroll-margin-top: 100px;
+
+  @include breakpoint(desktop-up) {
+    scroll-margin-top: 24px;
   }
 }

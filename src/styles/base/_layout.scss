@@ -1,5 +1,5 @@
-@use "settings" as *;
-@use "mixins" as *;
+@use 'settings' as *;
+@use 'mixins' as *;
 *,
 *:before,
 *:after {
@@ -17,7 +17,7 @@ body {
   font-weight: normal;
   font-family: $base-font;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.65;
   color: $color-text;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -67,25 +67,28 @@ a {
 }
 
 p {
-  padding: 0 0 10px;
+  padding: 0 0 14px;
 }
 
 h1 {
   font-family: $font-title;
   padding: 10px 0;
-  font-size: 24px;
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
   font-weight: normal;
   color: $white;
   @include breakpoint(tablet-up) {
-    font-size: 32px;
+    font-size: 36px;
   }
 }
 
 h2 {
   font-family: $font-Heebo;
-  font-size: 18px;
-  padding: 5px 0;
-  font-weight: normal;
+  font-size: 20px;
+  line-height: 1.4;
+  padding: 8px 0;
+  font-weight: 600;
   .icon {
     margin-right: 10px;
   }
@@ -93,8 +96,8 @@ h2 {
 
 h3 {
   font-family: $font-Raleway;
-  font-size: 16px;
-  padding: 13px 2px 4px 0;
+  font-size: 17px;
+  padding: 18px 2px 8px 0;
   color: $light-red;
   font-weight: normal;
 }
@@ -124,11 +127,15 @@ body {
 
 .site-main {
   @include flex(1);
-  padding: 15px 10px;
+  padding: 24px 16px;
+  @include breakpoint(tablet-up) {
+    padding: 40px 24px;
+  }
   background: #181208;
 }
 
 .site-content {
+  display: flow-root;
   width: 100%;
 }
 
@@ -140,7 +147,7 @@ body {
   @include breakpoint(desktop-up) {
     width: 70%;
     float: left;
-    padding-right: 10px;
+    padding-right: 24px;
   }
 }
 
@@ -156,7 +163,7 @@ body {
     width: 30%;
     float: left;
     margin: 0;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 24px;
     border-top: none;
     border-left: solid 1px $color-border;
   }
@@ -170,4 +177,21 @@ body {
 // React adds a root element between body and the legacy layout.
 #root {
   height: 100%;
+}
+
+// Shared tap-to-call affordance, without changing the displayed phone numbers.
+.phone-link {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  text-decoration: underline;
+  text-decoration-color: #846c46;
+  text-underline-offset: 4px;
+  &:hover {
+    color: $light-red;
+  }
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid $light-red;
+  outline-offset: 4px;
 }

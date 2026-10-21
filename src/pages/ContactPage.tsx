@@ -1,3 +1,4 @@
+import PhoneLink from '../components/content/PhoneLink';
 import Icon from '../components/content/Icon';
 import '../styles/pages/contact.scss';
 
@@ -14,7 +15,7 @@ export default function ContactPage() {
       <div className="contact-item">
         <h2><Icon name="phone" />Contact</h2>
         <div>
-          <p><span className="contact-item__label">Telefon:</span>0722 227020</p>
+          <p><span className="contact-item__label">Telefon:</span><PhoneLink number="0722 227020" /></p>
           <p><span className="contact-item__label">Email:</span>contact@salon-cochet.ro</p>
         </div>
       </div>

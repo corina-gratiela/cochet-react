@@ -7,7 +7,7 @@ export default function ManicurePage() {
     <>
       <title>Manichiură si pedichiura Sibiu, aplicări unghii cu gel</title>
       <meta name="description" content="Manichiură și pedichiură, aplicări unghii cu gel la Salon Cochet Sibiu" />
-      <h1>Manichiura si pedichiura</h1>
+      <h1>Manichiură și pedichiură</h1>
       <div className="category-box">
         <p>La Salon Cochet transformăm fiecare manichiură într-o operă de artă - tipsuri, gel, semipermanentă și picturi personalizate pentru unghii impecabile în orice moment!</p>
         <p>Pentru îngrijirea mâinilor și picioarelor folosim creme hidratante, seruri și produse profesionale de curățare, menite să ofere o manichiură și o pedichiură impecabile. Serviciile noastre de manichiură și pedichiură sunt variate și dedicate atât femeilor, cât și bărbaților.</p>
@@ -19,7 +19,7 @@ export default function ManicurePage() {
 
       <div className="category-box">
         <div className="preturi">
-          <div className="preturi__title">Preturi manichiura</div>
+          <div className="preturi__title">Prețuri manichiură</div>
           <div className="preturi__list" style={{ maxWidth: 500 }}>
             <div className="pret">
               <div className="pret__label">Manichiură simplă</div>
@@ -49,7 +49,7 @@ export default function ManicurePage() {
         </div>
 
         <div className="preturi">
-          <div className="preturi__title">Preturi pedichiura</div>
+          <div className="preturi__title">Prețuri pedichiură</div>
           <div className="preturi__list" style={{ maxWidth: 500 }}>
             <div className="pret">
               <div className="pret__label">Pedichiură simplă</div>

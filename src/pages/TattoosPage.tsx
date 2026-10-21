@@ -1,3 +1,4 @@
+import PhoneLink from '../components/content/PhoneLink';
 import ContentSection from "../components/content/ContentSection";
 import PhotoGallery from "../components/gallery/PhotoGallery";
 import { tattoosGallery } from "../data/tattoosGallery";
@@ -16,7 +17,7 @@ export default function TattoosPage() {
         </p>
 
         <p>Conturul pentru buze defineşte o linie perfectă a buzelor în armonie perfectă cu chipul dumneavoastră.</p>
-        <p>Pentru microblading si micropigmentare sunați la 0730 809072</p>
+        <p>Pentru microblading si micropigmentare sunați la <PhoneLink number="0730 809072" /></p>
       </div>
 
       <div className="category-box">

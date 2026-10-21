@@ -15,15 +15,14 @@ $color-menu-active: $white;
 $color-link: $color-text;
 $color-link-footer: $color-text;
 
-$font-Raleway: 'Raleway', sans-serif;
-$font-Heebo: 'Heebo', sans-serif;
+// Open Sans for reading and interface text; Cinzel only for the homepage brand.
 $font-OpenSans: 'Open Sans', sans-serif;
 $font-Cinzel: 'Cinzel Decorative', cursive;
-$font-title: $font-Cinzel;
-
+$font-Raleway: $font-OpenSans;
+$font-Heebo: $font-OpenSans;
+$font-title: $font-OpenSans;
 $base-font: $font-OpenSans;
-$menu-font: $font-Heebo;
-
+$menu-font: $font-OpenSans;
 // Preserve the legacy transitions: small through 768px; desktop from 1024px.
 $break-tablet-up: 769px;
 $break-desktop-up: 1024px;

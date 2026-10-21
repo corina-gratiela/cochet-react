@@ -15,7 +15,7 @@
 }
 
 .preturi__title {
-  font-family: $font-Cinzel;
+  font-family: $font-title;
   font-size: 20px;
   color: #a08a64;
   padding-bottom: 8px;
@@ -29,7 +29,7 @@
   font-size: 16px;
   display: block;
   @include justify-content(space-between);
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 
   @include breakpoint(tablet-up) {
     @include flexbox;
@@ -51,4 +51,3 @@
     text-align: right;
   }
 }
-
