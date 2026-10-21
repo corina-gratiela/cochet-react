@@ -85,6 +85,9 @@
   display: grid;
   gap: 24px;
   align-items: start;
+  > .info-panel + .info-panel {
+    margin-top: 0;
+  }
   > * {
     min-width: 0;
   }

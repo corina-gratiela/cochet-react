@@ -11,7 +11,9 @@ export default function SiteLayout() {
   const isManicure = useMatch('/servicii/manichiura');
   const isCosmetics = useMatch('/servicii/cosmetica');
   const isTattoos = useMatch('/servicii/tatuaje');
-  const isWideService = isHair || isManicure || isCosmetics || isTattoos;
+  const isGallery = useMatch('/galerie-foto');
+  const isContact = useMatch('/contact');
+  const isWidePage = isHair || isManicure || isCosmetics || isTattoos || isGallery || isContact;
   return (
     <div className="body-container">
       <SiteHeader />
@@ -22,11 +24,11 @@ export default function SiteLayout() {
       </div>
       <main className="site-main">
         <div className="wrapper">
-          <div className={`site-content${isHome ? ' site-content--home' : ''}${isWideService ? ' site-content--wide' : ''}`}>
+          <div className={`site-content${isHome ? ' site-content--home' : ''}${isWidePage ? ' site-content--wide' : ''}`}>
             <div className="site-content__left">
               <Outlet />
             </div>
-            {!isWideService && <SalonSidebar />}
+            {!isWidePage && <SalonSidebar />}
           </div>
         </div>
       </main>

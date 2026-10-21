@@ -1,7 +1,7 @@
 @use '../base/settings' as *;
+@use '../base/mixins' as *;
 
-// Contact-only rules from legacy scss/layout/_pages.scss.
-// Global typography and responsive columns remain in the shared layout.
+// Contact details and map; the full-width layout and information panels are shared.
 .contact-item {
   & + .contact-item {
     margin-top: 20px;
@@ -19,4 +19,21 @@
   width: 100%;
   border: solid 1px $color-border;
   padding: 5px;
+}
+.contact-details {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 32px;
+  .contact-item + .contact-item {
+    margin-top: 0;
+  }
+  @include breakpoint(tablet-up) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.harta iframe {
+  display: block;
+}
+.contact-panels {
+  margin-top: 32px;
 }

@@ -6,38 +6,7 @@ import InfoPanel from '../content/InfoPanel';
 export default function SalonSidebar() {
   return (
     <aside className="site-content__right" aria-label="Informații salon">
-      <InfoPanel id="programari" title="Programări">
-        <div className="info-panel__program">
-          <div className="info-panel__line">
-            <span className="entry">Coafură, frizerie:</span>
-            <span className="value">
-              <PhoneLink number="0722 227020" />
-            </span>
-          </div>
-          <div className="info-panel__line">
-            <span className="entry">Manichiură, pedichiură:</span>
-            <span className="value">
-              <PhoneLink number="0758 641200" />
-              <br />
-              <PhoneLink number="0732 125905" />
-              <br />
-              <PhoneLink number="0743 505205" />
-            </span>
-          </div>
-          <div className="info-panel__line">
-            <span className="entry">Microblading, micropigmentare:</span>
-            <span className="value">
-              <PhoneLink number="0730 809072" />
-            </span>
-          </div>
-          <div className="info-panel__line">
-            <span className="entry">Cosmetică:</span>
-            <span className="value">
-              <PhoneLink number="0741 391807" />
-            </span>
-          </div>
-        </div>
-      </InfoPanel>
+      <SalonAppointments />
       <SalonHours />
       <InfoPanel title="Oferim servicii de">
         <div className="info-panel__content">
@@ -106,6 +75,43 @@ export function SalonHours() {
           <p>
             <Icon name="mail" /> <a href="mailto:contact@salon-cochet.ro">contact@salon-cochet.ro</a>
           </p>
+        </div>
+      </div>
+    </InfoPanel>
+  );
+}
+
+export function SalonAppointments() {
+  return (
+    <InfoPanel id="programari" title="Programări">
+      <div className="info-panel__program">
+        <div className="info-panel__line">
+          <span className="entry">Coafură, frizerie:</span>
+          <span className="value">
+            <PhoneLink number="0722 227020" />
+          </span>
+        </div>
+        <div className="info-panel__line">
+          <span className="entry">Manichiură, pedichiură:</span>
+          <span className="value">
+            <PhoneLink number="0758 641200" />
+            <br />
+            <PhoneLink number="0732 125905" />
+            <br />
+            <PhoneLink number="0743 505205" />
+          </span>
+        </div>
+        <div className="info-panel__line">
+          <span className="entry">Microblading, micropigmentare:</span>
+          <span className="value">
+            <PhoneLink number="0730 809072" />
+          </span>
+        </div>
+        <div className="info-panel__line">
+          <span className="entry">Cosmetică:</span>
+          <span className="value">
+            <PhoneLink number="0741 391807" />
+          </span>
         </div>
       </div>
     </InfoPanel>
