@@ -3,10 +3,10 @@
 
 // Only legacy homepage rules; shared layout stays in main.scss.
 .prezentare-servicii {
-  @include flexbox;
+  display: block;
 
-  @include breakpoint(medium) {
-    display: block;
+  @include breakpoint(desktop-up) {
+    @include flexbox;
   }
 }
 
@@ -61,7 +61,8 @@
 }
 
 .home-video {
-  @include breakpoint(smartphones) {
-    display: none;
+  display: none;
+  @include breakpoint(tablet-up) {
+    display: block;
   }
 }

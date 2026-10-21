@@ -10,11 +10,11 @@
 }
 
 .site-footer .wrapper {
-	@include flexbox;
+	display: block;
 	@include justify-content(space-between);
 
-	@include breakpoint(smartphones) {
-		display: block;
+	@include breakpoint(tablet-up) {
+		@include flexbox;
 	}
 }
 
@@ -24,19 +24,21 @@
 }
 
 .site-footer__bottom {
+	text-align: center;
 	padding: 10px;
 	border-top: 1px solid #877658;
 	background: #18140d;
 
 	.wrapper {
+		display: block;
 		@include align-items(center);
 	}
 
-	@include breakpoint(medium) {
-		text-align: center;
+	@include breakpoint(desktop-up) {
+		text-align: initial;
 
 		.wrapper {
-			display: block;
+			display: flex;
 		}
 	}
 }
@@ -57,18 +59,20 @@
 }
 
 .footer-nav {
-	@include breakpoint(medium) {
-		display: inline-block;
-		margin-bottom: 5px;
+	display: inline-block;
+	margin-bottom: 5px;
+	@include breakpoint(desktop-up) {
+		display: block;
+		margin-bottom: 0;
 	}
 }
 
 .footer-nav__list {
-	@include flexbox;
+	display: block;
 	list-style-type: none;
 
-	@include breakpoint(smartphones) {
-		display: block;
+	@include breakpoint(tablet-up) {
+		@include flexbox;
 	}
 }
 
@@ -91,9 +95,10 @@
 .footer-box {
 	text-align: left;
 	padding: 10px;
+	margin-bottom: 20px;
 
-	@include breakpoint(medium) {
-		margin-bottom: 20px;
+	@include breakpoint(desktop-up) {
+		margin-bottom: 0;
 	}
 }
 

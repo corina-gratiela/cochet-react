@@ -73,11 +73,11 @@ p {
 h1 {
   font-family: $font-title;
   padding: 10px 0;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: normal;
   color: $white;
-  @include breakpoint(smartphones) {
-    font-size: 24px;
+  @include breakpoint(tablet-up) {
+    font-size: 32px;
   }
 }
 
@@ -128,28 +128,32 @@ body {
 }
 
 .site-content__left {
-  width: 70%;
-  float: left;
-  padding-right: 10px;
-  @include breakpoint(medium) {
-    width: 100%;
-    float: none;
-    padding-right: 0;
+  width: 100%;
+  float: none;
+  padding-right: 0;
+
+  @include breakpoint(desktop-up) {
+    width: 70%;
+    float: left;
+    padding-right: 10px;
   }
 }
 
 .site-content__right {
-  width: 30%;
-  float: left;
-  padding: 0 0 0 10px;
-  border-left: solid 1px $color-border;
-  @include breakpoint(medium) {
-    width: 100%;
-    float: none;
-    margin: 10px 0 0;
-    padding: 10px 0;
-    border-top: solid 1px $color-border;
-    border-left: none;
+  width: 100%;
+  float: none;
+  margin: 10px 0 0;
+  padding: 10px 0;
+  border-top: solid 1px $color-border;
+  border-left: none;
+
+  @include breakpoint(desktop-up) {
+    width: 30%;
+    float: left;
+    margin: 0;
+    padding: 0 0 0 10px;
+    border-top: none;
+    border-left: solid 1px $color-border;
   }
 }
 

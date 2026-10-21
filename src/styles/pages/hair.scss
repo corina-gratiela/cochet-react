@@ -3,18 +3,18 @@
 // Only responsive artwork and treatment-video sizing are specific to this page.
 // Typography, sections, image borders, pricing and gallery styles are shared.
 .image-desktop {
-  display: block;
+  display: none;
 
-  @include breakpoint(smartphones) {
-    display: none;
+  @include breakpoint(tablet-up) {
+    display: block;
   }
 }
 
 .image-mobile {
-  display: none;
+  display: block;
 
-  @include breakpoint(smartphones) {
-    display: block;
+  @include breakpoint(tablet-up) {
+    display: none;
   }
 }
 

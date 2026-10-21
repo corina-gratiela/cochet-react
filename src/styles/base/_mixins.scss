@@ -1,8 +1,16 @@
 @use 'settings' as *;
-@mixin breakpoint($media) {
-  @if $media == smartphones { @media only screen and (max-width: $break-small) { @content; } }
-  @else if $media == medium { @media only screen and (max-width: $break-large - 1) { @content; } }
+
+// Mobile styles are the defaults; only add rules for larger viewports.
+@mixin breakpoint($size) {
+  @if $size == tablet-up {
+    @media only screen and (min-width: $break-tablet-up) { @content; }
+  } @else if $size == desktop-up {
+    @media only screen and (min-width: $break-desktop-up) { @content; }
+  } @else {
+    @error 'Unknown breakpoint: #{$size}. Use tablet-up or desktop-up.';
+  }
 }
+
 @mixin flexbox { display: flex; }
 @mixin flex-direction($value: row) { flex-direction: $value; }
 @mixin flex($value: 1) { flex: $value; }

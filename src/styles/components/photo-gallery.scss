@@ -5,6 +5,7 @@
 
 .owl-carousel {
   .owl-nav {
+    display: none;
     position: absolute;
     top: 40%;
     width: 100%;
@@ -41,8 +42,8 @@
       float: right;
     }
 
-    @include breakpoint(smartphones) {
-      display: none;
+    @include breakpoint(tablet-up) {
+      display: block;
     }
   }
 }
@@ -59,16 +60,16 @@
 .info-poza {
   position: absolute;
   right: 10px;
-  bottom: 40px;
+  bottom: 10px;
   padding: 8px 40px;
   background: rgba(0, 0, 0, 0.5);
   color: $white;
-  font-size: 23px;
+  font-size: 18px;
   line-height: 1.2;
 
-  @include breakpoint(smartphones) {
-    font-size: 18px;
-    bottom: 10px;
+  @include breakpoint(tablet-up) {
+    font-size: 23px;
+    bottom: 40px;
   }
 }
 

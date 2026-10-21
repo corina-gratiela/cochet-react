@@ -27,12 +27,12 @@
 
 .pret {
   font-size: 16px;
-  @include flexbox;
+  display: block;
   @include justify-content(space-between);
   padding-bottom: 5px;
 
-  @include breakpoint(smartphones) {
-    display: block;
+  @include breakpoint(tablet-up) {
+    @include flexbox;
   }
 }
 
@@ -45,10 +45,10 @@
 .pret__value {
   color: #a08a64;
   width: 150px;
-  text-align: right;
+  text-align: left;
 
-  @include breakpoint(smartphones) {
-    text-align: left;
+  @include breakpoint(tablet-up) {
+    text-align: right;
   }
 }
 

@@ -24,5 +24,6 @@ $font-title: $font-Cinzel;
 $base-font: $font-OpenSans;
 $menu-font: $font-Heebo;
 
-$break-small: 768px;
-$break-large: 1024px;
+// Preserve the legacy transitions: small through 768px; desktop from 1024px.
+$break-tablet-up: 769px;
+$break-desktop-up: 1024px;

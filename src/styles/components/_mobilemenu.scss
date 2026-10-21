@@ -4,10 +4,10 @@
 .mobile-menu {
 	border-top : solid 1px #604f2c;
 	width      : 100%;
-	display    : none;
+	display    : block;
 	background: #000;
-	@include breakpoint(medium) {
-		display : block;
+	@include breakpoint(desktop-up) {
+		display : none;
 	}
 }
 
