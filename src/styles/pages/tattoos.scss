@@ -1,1 +1,10 @@
-// Image/pricing styles are shared through main.scss; no page-specific rules needed.
+.tattoos-intro__image {
+  width: 100%;
+  max-width: 600px;
+  margin: 8px 0 24px;
+  .category-box__img {
+    display: block;
+    height: auto;
+    margin-bottom: 0;
+  }
+}

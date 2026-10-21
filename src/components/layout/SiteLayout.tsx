@@ -9,7 +9,9 @@ export default function SiteLayout() {
   const isHome = useMatch('/');
   const isHair = useMatch('/servicii/coafor');
   const isManicure = useMatch('/servicii/manichiura');
-  const isWideService = isHair || isManicure;
+  const isCosmetics = useMatch('/servicii/cosmetica');
+  const isTattoos = useMatch('/servicii/tatuaje');
+  const isWideService = isHair || isManicure || isCosmetics || isTattoos;
   return (
     <div className="body-container">
       <SiteHeader />
