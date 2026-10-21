@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import type { EmblaCarouselType } from 'embla-carousel';
@@ -20,8 +20,9 @@ interface PhotoGalleryProps {
   desktopSlides?: 2 | 2.5;
 }
 
-export default function PhotoGallery({ images, label, maxWidth, autoplay = true, autoplayTimeout = 5000, navigation = true, dots = true, loop = true, desktopSlides = 2.5 }: PhotoGalleryProps) {
+export default function PhotoGallery({ images, label, maxWidth, autoplay = true, autoplayTimeout = 3000, navigation = true, dots = true, loop = true, desktopSlides = 2.5 }: PhotoGalleryProps) {
   const [userPaused, setUserPaused] = useState(false);
+  const resumePending = useRef(false);
   const autoplayPlugin = useMemo(
     () =>
       Autoplay({
@@ -59,10 +60,19 @@ export default function PhotoGallery({ images, label, maxWidth, autoplay = true,
 
   useEffect(() => {
     if (!api) return;
+    const onReInit = (carousel: EmblaCarouselType) => {
+      syncControls(carousel);
+      if (!resumePending.current) return;
+      resumePending.current = false;
+      // Resume after the autoplay plugin is reactivated, without its first delay.
+      if (carousel.canScrollNext()) carousel.scrollNext();
+      else carousel.scrollTo(0);
+      carousel.plugins().autoplay?.reset();
+    };
     syncControls(api);
-    api.on('select', syncControls).on('reInit', syncControls);
+    api.on('select', syncControls).on('reInit', onReInit);
     return () => {
-      api.off('select', syncControls).off('reInit', syncControls);
+      api.off('select', syncControls).off('reInit', onReInit);
     };
   }, [api, syncControls]);
 
@@ -125,8 +135,16 @@ export default function PhotoGallery({ images, label, maxWidth, autoplay = true,
             </div>
           )}
           {autoplay && (
-            <button className="photo-gallery__playback" type="button" aria-label={userPaused ? 'Pornește redarea automată' : 'Oprește redarea automată'} onClick={() => setUserPaused((paused) => !paused)}>
-              {userPaused ? 'Redare' : 'Pauză'}
+            <button
+              className="photo-gallery__playback"
+              type="button"
+              aria-label={userPaused ? 'Pornește redarea automată' : 'Oprește redarea automată'}
+              onClick={() => {
+                resumePending.current = userPaused;
+                setUserPaused((paused) => !paused);
+              }}
+            >
+              {userPaused ? 'Play' : 'Pause'}
             </button>
           )}
         </div>
