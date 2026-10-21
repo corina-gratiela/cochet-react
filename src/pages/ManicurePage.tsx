@@ -1,6 +1,6 @@
-import ContentSection from "../components/content/ContentSection";
-import PhotoGallery from "../components/gallery/PhotoGallery";
-import { manicureGallery } from "../data/manicureGallery";
+import ContentSection from '../components/content/ContentSection';
+import PhotoGallery from '../components/gallery/PhotoGallery';
+import { manicureGallery } from '../data/manicureGallery';
 
 export default function ManicurePage() {
   return (
@@ -10,20 +10,11 @@ export default function ManicurePage() {
       <h1>Manichiura si pedichiura</h1>
       <div className="category-box">
         <p>La Salon Cochet transformăm fiecare manichiură într-o operă de artă - tipsuri, gel, semipermanentă și picturi personalizate pentru unghii impecabile în orice moment!</p>
-        <p>
-          Pentru îngrijirea mâinilor și picioarelor folosim creme hidratante, seruri și produse profesionale de curățare, menite să ofere o manichiură și o pedichiură impecabile. Serviciile noastre de
-          manichiură și pedichiură sunt variate și dedicate atât femeilor, cât și bărbaților.
-        </p>
+        <p>Pentru îngrijirea mâinilor și picioarelor folosim creme hidratante, seruri și produse profesionale de curățare, menite să ofere o manichiură și o pedichiură impecabile. Serviciile noastre de manichiură și pedichiură sunt variate și dedicate atât femeilor, cât și bărbaților.</p>
         <p />
 
         <p>Punem accent pe sănătatea și frumusețea unghiilor, utilizând tehnici profesionale și produse de calitate, care asigură rezistență îndelungată și un aspect perfect.</p>
         <p>Lucrăm cu produse profesionale OPI și Melkior, iar pentru manichiura semipermanentă folosim gama profesională OPI.</p>
-      </div>
-
-      <div className="category-box">
-        <ContentSection title="Galerie foto manichiură">
-          <PhotoGallery images={manicureGallery} label="Galerie foto manichiură" />
-        </ContentSection>
       </div>
 
       <div className="category-box">
@@ -77,7 +68,13 @@ export default function ManicurePage() {
       </div>
 
       <div className="category-box">
-        <img className="category-box__img" style={{ maxWidth: 600 }} src={import.meta.env.BASE_URL + "images/site/mani-pedi.jpg"} alt="Manichiura si pedichiura la Salon Cochet Sibiu" />
+        <ContentSection title="Galerie foto manichiură">
+          <PhotoGallery images={manicureGallery} label="Galerie foto manichiură" />
+        </ContentSection>
+      </div>
+
+      <div className="category-box">
+        <img className="category-box__img" style={{ maxWidth: 600 }} src={import.meta.env.BASE_URL + 'images/site/mani-pedi.jpg'} alt="Manichiura si pedichiura la Salon Cochet Sibiu" />
       </div>
     </>
   );
