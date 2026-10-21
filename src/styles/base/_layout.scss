@@ -113,8 +113,13 @@ body {
 .body-container {
   @include flexbox;
   min-height: 100%;
-  height: 100%;
+  // Let the sticky menu's containing block extend through the full page.
+  height: auto;
   @include flex-direction(column);
+
+  @include breakpoint(desktop-up) {
+    height: 100%;
+  }
 }
 
 .site-main {

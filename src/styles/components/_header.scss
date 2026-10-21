@@ -4,7 +4,11 @@
 .site-header {
 	position: relative;
 	@include backgroundGradient(#444044, #241c22);
-	padding: 0 0 5px;
+	padding: 0;
+
+	@include breakpoint(desktop-up) {
+		padding: 0 0 5px;
+	}
 
 	.wrapper {
 		@include flexbox;
@@ -12,6 +16,8 @@
 	}
 
 	&:after {
+		display: none;
+		@include breakpoint(desktop-up) { display: block; }
 		content: " ";
 		position: absolute;
 		width: 100%;
